@@ -1,30 +1,142 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Rob King</title>
+    <description>&quot;works with computers.&quot;
+</description>
+    <link>http://robking.co/</link>
+    <atom:link href="http://robking.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 29 Jun 2016 08:56:02 -0700</pubDate>
+    <lastBuildDate>Wed, 29 Jun 2016 08:56:02 -0700</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Helm Operations</title>
+        <description>&lt;h4 id=&quot;web-designer&quot;&gt;Web Designer&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Manage a pattern library built with Fabricator to organize and standardize UI components&lt;/li&gt;
+  &lt;li&gt;Create and maintain a large CSS/Less collection (following SMACSS structure).&lt;/li&gt;
+  &lt;li&gt;Implement PostCSS for linting, formatting, and sorting, to help enforce CSS coding standards and consistency.&lt;/li&gt;
+  &lt;li&gt;Design mockups in Sketch as needed.&lt;/li&gt;
+  &lt;li&gt;Create prototypes using Invision or Codepen to illustrate workflows or interactions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;creative-team-lead&quot;&gt;Creative Team Lead&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Lead a team of two developers to build multiple features requiring heavy UI direction
+    &lt;ul&gt;
+      &lt;li&gt;Self Serve, Trials, Versioned Documents&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Conduct one on one meetings with team members&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 20 Jun 2016 22:26:04 -0700</pubDate>
+        <link>http://robking.co/work/helm-operations.html</link>
+        <guid isPermaLink="true">http://robking.co/work/helm-operations.html</guid>
+        
+        
+        <category>web</category>
+        
+        <category>ui</category>
+        
+        <category>front-end</category>
+        
+        <category>management</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Terapeak</title>
+        <description>&lt;h4 id=&quot;development&quot;&gt;Development&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Worked with product manager and user experience designer to define new product, using mind mapping, user interviews, and design research/discovery exercises.&lt;/li&gt;
+  &lt;li&gt;Generated wireframes and mockups for upcoming products in pipeline.&lt;/li&gt;
+  &lt;li&gt;Implementation of Terapeak 9 with dev team. Used Compass/SASS, HTML, and javascript.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;marketing&quot;&gt;Marketing&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Solicit stakeholders and define goals of website redesign.&lt;/li&gt;
+  &lt;li&gt;Multiple design iterations based on stakeholder needs and user feedback.&lt;/li&gt;
+  &lt;li&gt;Implemented design into drupal and custom frameworks across multi-lingual sites.&lt;/li&gt;
+  &lt;li&gt;Made updates and changes to print collateral as needed.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 20 Jun 2016 22:26:04 -0700</pubDate>
+        <link>http://robking.co/work/terapeak.html</link>
+        <guid isPermaLink="true">http://robking.co/work/terapeak.html</guid>
+        
+        
+        <category>web</category>
+        
+        <category>ui</category>
+        
+        <category>print</category>
+        
+      </item>
+    
+      <item>
+        <title>Escape Compass</title>
+        <description>&lt;h4 id=&quot;lead-designer&quot;&gt;Lead Designer&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Logo and brand design&lt;/li&gt;
+  &lt;li&gt;UI design iterations and implementation based on bootstrap 3&lt;/li&gt;
+  &lt;li&gt;Manage product road map and task others as necessary&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;View site - &lt;a href=&quot;http://www.escapecompass.com&quot;&gt;Escape Compass&lt;/a&gt;
+As a sideproject this makes no money. It’s been a labour of love.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 20 Jun 2016 22:26:04 -0700</pubDate>
+        <link>http://robking.co/work/escape-compass.html</link>
+        <guid isPermaLink="true">http://robking.co/work/escape-compass.html</guid>
+        
+        
+        <category>web</category>
+        
+        <category>ui</category>
+        
+        <category>side project</category>
+        
+      </item>
+    
+      <item>
+        <title>ENXSuite</title>
+        <description>&lt;h4 id=&quot;in-development&quot;&gt;In Development&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Worked with the principal architect and development manager to define functionality and workflow.&lt;/li&gt;
+  &lt;li&gt;Created mockups and rough prototypes.&lt;/li&gt;
+  &lt;li&gt;Worked closely with developers for implementation.&lt;/li&gt;
+  &lt;li&gt;Worked on new version of the app using HTML and SASS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;in-marketing&quot;&gt;In Marketing&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;created multiple mockups, iterating through various look and feels&lt;/li&gt;
+  &lt;li&gt;implemented design using the Zend PHP framework with another developer&lt;/li&gt;
+  &lt;li&gt;made updates and changes to print collateral as needed&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 20 Jun 2016 22:26:04 -0700</pubDate>
+        <link>http://robking.co/work/enxsuite.html</link>
+        <guid isPermaLink="true">http://robking.co/work/enxsuite.html</guid>
+        
+        
+        <category>web</category>
+        
+        <category>ui</category>
+        
+        <category>front-end</category>
+        
+      </item>
+    
   </channel>
 </rss>
