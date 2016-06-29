@@ -1,0 +1,136 @@
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+    padding: 60px 0;
+
+
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 2px;
+        height: 100%;
+        background-color: $timeline-color;
+        top:0;
+        left: 50%;
+        margin-left: -1px;
+    }
+}
+.tl-item {
+    position: relative;
+    width: 100%;
+	@include breakpoint(break-3) {
+	    width: calc(50% - (#{$size} / 2));
+    }
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .tl-content:before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: -($size + 10);
+        left: 50%;
+        margin-left: -($size/2);
+	    @include breakpoint(break-3) {
+	    	left: auto;
+	    	margin-left: auto;
+	        right: -$size;
+	        top: 50%;
+	        margin-top: -($size/2);
+	    }
+        height: $size;
+        width: $size;
+        background-color: $timeline-color;
+        border: 2px solid #333;
+        border-radius: 20px;
+        box-shadow: 0 0 0 0 rgba(0,0,0,0.0);
+        transition: all 0.2s ease-out;
+    }
+    &:nth-child(even) {
+        align-self: flex-end;
+        .tl-content:before {
+        	@include breakpoint(break-3) {
+	            right: auto;
+	            left: -$size;
+	        }
+        }
+    }
+}
+.tl-content {
+    background-color: $post-list-item-bg;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: all 0.2s ease-out;
+    width: 100%;
+    @include breakpoint(break-3) {
+	    width: auto;
+    }
+    
+    h3 {
+    	padding-top: 0;
+    }
+}
+
+.tl-date {
+    position: absolute;
+    transition: opacity 0.3s ease-out;
+    right: 20px;
+    top: -20px;
+    white-space: nowrap;
+    background-color: $grey-color-light;
+    padding: 5px;
+    @include sassline($fontsize: iota, $font: $monospacetype, $lineheight: 1, $below: 0, $breakpoint: all);
+    // @include baseline($fontsize: iota, $font: $monospacetype, $lineheight: 1.5, $below: 0, $breakpoint: all);
+    font-family: unquote(map-get($monospacetype, font-family));
+    color: $grey-color;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.tl-categories {
+	padding: 8px;
+	border-top: 1px solid $grey-color;
+	background-color: $timeline-color;
+	color: #fff;
+	transition: background 0.3s ease-out;
+    font-family: unquote(map-get($monospacetype, font-family));
+    @include fontsize(theta, all);
+    text-align: center;
+}
+
+.is-current.tl-content {
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.4);
+}
+.read-more {
+    margin: 5px;
+    font-family: unquote(map-get($monospacetype, font-family));
+    font-size: 0.9rem;
+    display: inline-block;
+    color: $brand-color;
+    text-decoration: underline;
+    text-transform: uppercase;
+    padding: 2px 15px 1px 15px;
+    text-align: center;
+    border-radius: 4px;
+    &:hover, &:focus {
+        color: $brand-color;
+        box-shadow: 0 0 0 2px darken($brand-color, 10%);
+    }
+    &:active {
+        box-shadow: 0 0 0 2px darken($brand-color, 10%), 0 0 5px 0 darken($brand-color, 10%) inset;
+    }
+}
+
+.tl-title {
+    font-family: unquote(map-get($headingtype, font-family));
+    @include fontsize(delta, all);
+    font-weight: bold;
+    @include nice-borders();
+}

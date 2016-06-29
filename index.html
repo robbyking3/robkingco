@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<div class="wrapper">
+  <div class="timeline">
+  {% assign sorted = site.posts | sort: "dateStarted" %}
+    {% for post in sorted reversed %}
+      <div class="tl-item">
+        <div class="tl-content vbox {% if post.isCurrent %} is-current {% endif %}">
+          <div class="pal">
+            <div class="tl-title small-caps">
+              {{ post.title }}
+            </div>
+            <p>
+              {{ post.summary}}
+            </p>
+            <div class="text-right">
+              <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Read more &rarr;</a>
+            </div>
+          </div>
+          
+          {% if post.categories.size > 0 %}
+          <div class="tl-categories">
+              {% for category in post.categories %}
+              {{category}}{% unless category == post.categories.@last %} • {% endunless %}
+              {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+        {% if post.isCurrent %}
+        <div class="tl-date">{{post.dateStarted | date: "%B %Y" }} to present</div>
+        {% elsif post.dateEnded %}
+        <div class="tl-date">{{post.dateStarted | date: "%B %Y" }} to {{post.dateEnded | date: "%B %Y" }}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
