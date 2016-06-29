@@ -10,7 +10,7 @@
   <meta name="description" content=""works with computers."
 ">
 
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="./css/main.css">
   <link rel="canonical" href="http://robking.co/resume">
   <link rel="alternate" type="application/rss+xml" title="Rob King" href="http://robking.co/feed.xml">  
 </head>
@@ -295,42 +295,12 @@
   </div>
 
 </footer>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="/assets/smoothstate.min.js"></script>
-<script>
-$(function() {
-   'use strict';
-  var options = {
-    prefetch: true,
-    cacheLength: 2,
-    onStart: {
-      duration: 250, // Duration of our animation
-      render: function ($container) {
-        // Add your CSS animation reversing class
-        $container.addClass('is-exiting');
-
-        // Restart your animation
-        smoothState.restartCSSAnimations();
-      }
-    },
-    onReady: {
-      duration: 0,
-      render: function ($container, $newContent) {
-        // Remove your CSS animation reversing class
-        $container.removeClass('is-exiting');
-
-        // Inject the new content
-        $container.html($newContent);
-
-      }
-    }
-  },
-  smoothState = $('#main').smoothState(options).data('smoothState');
-});
-</script>
-
 	</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="./assets/smoothstate.min.js"></script>
+  <script src="./assets/script.js"></script>
+
   </body>
 
 </html>
