@@ -4,10 +4,10 @@ layout: default
 <div class="section">
 	<div class="pagination">
 		{% if page.previous.url %}
-			<a class="pagination-prev" href="{{site.url}}{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+			<a class="pagination-prev" href="{{site.url}}{{page.previous.url}}">&laquo; View {{page.previous.title}}</a>
 		{% endif %}
 		{% if page.next.url %}
-			<a class="pagination-next" href="{{site.url}}{{page.next.url}}">{{page.next.title}} &raquo;</a>
+			<a class="pagination-next" href="{{site.url}}{{page.next.url}}">View {{page.next.title}} &raquo;</a>
 		{% endif %}
 	</div>
 </div>
@@ -26,7 +26,12 @@ layout: default
 				Employed {{page.dateStarted | date: "%B %Y" }} to {{page.dateEnded | date: "%B %Y" }}
 	        {% endif %}
 		</div>
-		<h6 class="mbs">Tags / Skillz</h6>
+		{% if page.projecturl %}
+		<div class="caption">
+			<a href="{{page.projecturl}}" target="blank">Visit {{page.projecturl}}</a>
+		</div>
+		{% endif %}
+		<h6 class="mbs">Types of work</h6>
 		<div class="label-collection">
 		{% for category in page.categories %}
 			<div class="label">

@@ -4,8 +4,8 @@
     display: flex;
     flex-direction: column;
     margin-top: -20px;
+    margin-bottom: -40px;
     padding: 60px 0;
-
 
     &:before {
         content: "";
@@ -84,12 +84,14 @@
     position: absolute;
     transition: opacity 0.3s ease-out;
     right: 20px;
-    top: -20px;
+    top: -10px;
+    @include breakpoint(break-2) {
+        top: -20px;
+    }
     white-space: nowrap;
     background-color: $grey-color-light;
     padding: 5px;
     @include sassline($fontsize: iota, $font: $monospacetype, $lineheight: 1, $below: 0, $breakpoint: all);
-    // @include baseline($fontsize: iota, $font: $monospacetype, $lineheight: 1.5, $below: 0, $breakpoint: all);
     font-family: unquote(map-get($monospacetype, font-family));
     color: $grey-color;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);

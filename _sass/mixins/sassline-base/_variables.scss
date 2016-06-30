@@ -87,10 +87,10 @@ $monospacetype: (
 $headingColour: #2E2E2E !default;
 $bodyColour: #494949 !default;
 $linkColour: lighten(#0E58F5, 20%) !default;
-$hoverColour: lighten($linkColour, 6%) !default;
+$hoverColour: darken($linkColour, 10%) !default;
 $captionColour: darken(#BDC8CC, 25%) !default;
 $white: #FFFFFF !default;
 
 // Background colours.
-$backgroundColour: #FCFCFC !default;
+$backgroundColour: $background-color !default;
 $codeBackgroundColour: #F5F4F2 !default;

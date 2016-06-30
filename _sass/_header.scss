@@ -4,7 +4,10 @@
     box-shadow: 0 1px 10px rgba(#111,0.15);
     flex-shrink: 1;
     flex-grow: 0;
-    min-height: 220px;
+    min-height: 0;
+    @include breakpoint(break-3) {
+        min-height: 220px;
+    }
 }
 .logo {
     display: block;
@@ -18,26 +21,31 @@
     background-size: contain;
 }
 h1.site-title {
-	line-height: 0.7;
+	line-height: 1.5;
     font-weight: 200;
     font-size: 1.3rem;
     text-transform: uppercase;
-    letter-spacing: 0.75rem;
+    @include breakpoint(break-3) {
+        letter-spacing: 0.75rem;
+    }
     color: mix($brand-color, $text-color);
 }
 
 nav {
     flex: 1;
     > a {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        min-width: 120px;
-        padding: 20px;
+        min-width: 90px;
+        padding: 12px 20px;
+        font-family: unquote(map-get($headingtype, font-family));
+
         &:hover {
-            background-color: $grey-color;
-            color: #fff;
+            color: $brand-color;
+            box-shadow: 0 0 0 1px $brand-color;
             text-decoration: none;
         }
     }
