@@ -10,7 +10,7 @@ title: Rob King
 email: robbyking3@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   "works with computers."
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://www.robking.co" # the base hostname & protocol for your site
 twitter_username: wscreative
 codepen_username: robbyking3
