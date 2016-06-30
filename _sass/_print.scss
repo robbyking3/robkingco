@@ -1,25 +1,35 @@
-@media print {
-	.print {
+@mixin resume() {
+	.resume {
 		display: block;
 		.print-logo {
 			height: 24mm;
 			width: 24mm;
+			display: block;
 		}
 		header.header {
 			display: none;
 		}
-		.header {
+		.resume-header {
 			min-height: 0;
-			padding-bottom: 3mm;
-			margin-bottom: 3mm;
+			padding: 0mm 4mm;
+			margin-bottom: 5mm;
 			border-left: none;
 			border-right: none;
 			box-shadow: none;
 			border-bottom: 1px solid #ccc;
-			background-color: none;
+			background-color: #fff;
+		    font-family: unquote(map-get($headingtype, font-family));
+			line-height: 1.2;
 		}
 		.section {
 			display: flex;
+		}
+		.section-experience {
+			padding-top: 2mm;
+			padding-bottom: 0;
+			margin-top: 0;
+			margin-bottom: 0;
+			border-top: 2px solid #ccc;
 		}
 		.column {
 			margin: 0;
@@ -27,30 +37,62 @@
 		}
 		.column--sidebar {
 			width: 24%;
-			text-align: right;
-			padding-right: 20px;
+			padding-right: 0;
 		}
 		.column--main {
 			width: 76%;
+			padding-left: 3mm;
 		}
+		$label-height: 5mm;
 		.label {
-			color: #555;
-			text-align: left;
-			border-bottom: 1px solid #ccc;
-			padding-right: 0;
-			padding-left: 0;
-			margin-left: 0;
-			margin-right: 0;
-			&:after, &:before {
-				content: "";
-				display: none;
-				border: none;
-			}
-		}
+		    position: relative;
+		    height: $label-height;
+		    padding: 1px 15px;
+		    margin-left: $label-height / 4;
+		    margin-right: $label-height / 4;
+		    margin-bottom: $label-height / 4;
+		    background-color: $brand-color;
+		    letter-spacing: 0.08rem;
+		    line-height: $label-height;
+		    vertical-align: middle;
+		    color: #fff;
+		    font-size: 0.8rem;
+		    > .label-content {
+		        position: relative;
+		        z-index: 10;
+		    }
+		    &:before, &:after {
+		        content: "";
+		        position: absolute;
+		        top: 0;
+		        border-width: ($label-height / 2) 10px;
+		        border-style: solid;
+		    }
+		    &:after {
+		        right: -20px;
+		        border-color: transparent transparent transparent $brand-color;
+		    }
+		    &:before {
+		        left: -10px;
+		        border-color: $brand-color transparent $brand-color transparent;
+		    }
+		    &.label-default {
+	        background-color: $grey-color;
+	        &:after {
+	            right: -20px;
+	            border-color: transparent transparent transparent $grey-color;
+	        }
+	        &:before {
+	            left: -10px;
+	            border-color: $grey-color transparent $grey-color transparent;
+	        }
+	    }
+	}
 
-		.typeset h3 {
+		h3 {
 			line-height: 2rem;
-			font-size: 1.36667rem;
+			font-size: 1.16667rem;
+			padding-top: 0;
 		}
 		.outline {
 			border: 1px solid #ccc;
@@ -59,6 +101,10 @@
 			margin-left: 4mm;
 			margin-right: 4mm;
 			width: 100%;
+		}
+		.description {
+			font-size: 1.1rem;
+			line-height: 1.5;
 		}
 		.typeset hr {
 			margin: 2mm 0;
@@ -81,12 +127,28 @@
 		}
 		.skills {
 		    font-family: unquote(map-get($headingtype, font-family));
-		    font-size: 90%;
+		    font-size: 0.9rem;
+		    line-height: 1.2;
 		}
-		.roles {
+		.roles p {
+			margin-left: 1mm;
+			margin-bottom: 0;
+			padding-top: 1mm;
+			paddding-bottom: 1mm;
 			line-height: 1.2;
-		    font-family: unquote(map-get($headingtype, font-family));
 			font-size: 0.9rem;
 		}
+		.caption {
+			padding-top: 0;
+			margin-top: 0;
+			font-size: 0.6rem;
+			text-transform: uppercase;
+		}
 	}
+}
+
+@include resume();
+
+@media print {
+	@include resume();
 }

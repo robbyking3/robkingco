@@ -1,36 +1,44 @@
----
-layout: default
----
-<div class="print">
-<article class="page">
-	<div class="section header">
-		<div class="hbox ai-center fill-width">
-			<div class="prl">
-				<img class="print-logo" src="{{site.url}}/assets/rk-logo-print.png" >
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="typeset resume">
+  <div class="fill-height vbox">
+    <div class="page-content" id="main">    
+		<article class="page">
+			<div class="section resume-header">
+				<div class="hbox ai-center fill-width">
+					<div class="prl">
+						<img class="print-logo" src="{{site.url}}/assets/rk-logo-print.png" >
+					</div>
+					<div class="hbox jc-space-between flex-1">
+						<div class="resume-name prm">Rob King</div>
+						<div class="smaller">
+							<a href="mailto:robbyking3@gmail.com">robbyking3@gmail.com</a>
+							<br>
+							<a href="http://www.robking.co">www.robking.co</a>
+						</div>
+						<div class="smaller">
+							Victoria BC Canada
+							<br>
+							250-516-3967
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="flex-1 flex">
-				<div class="resume-name prm">Rob King</div>
-				<div class="prm">
-					<a href="mailto:robbyking3@gmail.com">robbyking3@gmail.com</a>
-				</div>
-				<div class="prm">
-					<a href="http://www.robking.co">www.robking.co</a>
-				</div>
-				<div class="prm">
-					Victoria BC Canada
-				</div>
-			</div>
+		  <div class="post-content">
+		    {{ content }}
+		  </div>
+		</article>
+		<div class="text-center">
+			<em>
+			{{ site.description }}
+			</em>
 		</div>
+	    </div>
 	</div>
+  </body>
+</html>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
 
-</article>
-<p class="text-center">
-	<em>
-	{{ site.description }}
-	</em>
-</p>
-</div>

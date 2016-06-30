@@ -2,13 +2,13 @@
 layout: print
 qualifications :
   - graphic : [ "Photoshop", "Illustrator", "Sketch"]
-  - web : [ "CSS (Less, SASS, PostCSS)", "Javascript", "HTML", "Ruby on Rails", "PHP"]
-  - general : [ "Terminal", "Git", "Mac", "Linux", "Windows", "Agile/Scrum" ]
+  - web : [ "Less", "SASS", "PostCSS", "Javascript", "Ruby on Rails"]
+  - general : [ "Terminal", "Git", "Mac", "Linux", "Windows" ]
 ---
 
 <div class="section">
 	<div class="column">
-		<h4 class="upper">Qualifications</h4>
+		<h4 class="upper">Skills</h4>
 	</div>
 </div>
 <div class="section hbox ai-stretch">
@@ -39,28 +39,33 @@ qualifications :
 {% assign sorted = site.posts | sort: "dateStarted" %}
 {% for post in sorted reversed %}
 	{% if post.dateEnded or post.isCurrent %}
-	<div class="section">
+	<div class="section section-experience">
 		<div class="column column--sidebar">
-			<h3>{{ post.title }}</h3>
-			<small>
+			<h3>
+              <a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
+			</h3>
+		    <blockquote class="roles">
+				
+				</span>
+			    <p>
+				{% for role in post.roles %}
+					{{role}}{% unless role == post.roles.@last %}<br> {% endunless %}
+				{% endfor %}
+				</p>
+			</blockquote>
+			<div class="caption">
 				{% if post.isCurrent %}
 			    <div>{{post.dateStarted | date: "%B %Y" }} to present</div>
 			    {% elsif post.dateEnded %}
 			    <div>{{post.dateStarted | date: "%B %Y" }} to {{post.dateEnded | date: "%B %Y" }}</div>
 			    {% endif %}
-			    <div class="tl-categories mtm roles">
-					{% for role in post.roles %}
-						{{role}}{% unless role == post.roles.@last %}<br> {% endunless %}
-					{% endfor %}
-				</div>
-			</small>
+			</div>
 		</div>
 		<div class="column column--main">
-			<div class="outline">
+			<div class="description">
 				{{ post.resume }}
 			</div>
 		</div>
 	</div>
 	{% endif %}
-	<hr>
 {% endfor %}
