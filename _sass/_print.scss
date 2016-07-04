@@ -1,6 +1,7 @@
 @mixin resume() {
-	.resume {
+	body.resume {
 		display: block;
+		background-color: #fff;
 		.print-logo {
 			height: 24mm;
 			width: 24mm;
