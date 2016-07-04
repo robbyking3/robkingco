@@ -1038,19 +1038,16 @@ body {
   padding-top: 20px;
   padding-bottom: 40px;
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1; }
 
 .label-collection {
   position: relative;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .label {
   position: relative;
@@ -1118,11 +1115,9 @@ body {
   display: block;
   background-color: #EFEFEF;
   box-shadow: 0 1px 10px rgba(17, 17, 17, 0.15);
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
   min-height: 0; }
@@ -1153,21 +1148,17 @@ h1.site-title {
 
 nav {
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1; }
   nav > a {
     position: relative;
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
@@ -1204,17 +1195,14 @@ nav {
 
 .social-media {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
   @media screen and (min-width: 50em) {
     .social-media {
       -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
           -ms-flex-pack: start;
               justify-content: flex-start; } }
   .social-media a {
@@ -1237,11 +1225,9 @@ nav {
 
 .post-header {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 2.2rem; }
@@ -1253,7 +1239,6 @@ nav {
     position: relative;
     display: block;
     -webkit-box-flex: 1;
-    -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1;
     border-top: 2px dotted #ababab; }
@@ -1268,11 +1253,9 @@ nav {
   background-color: #EFEFEF;
   border-radius: 4px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 2px; }
@@ -1289,12 +1272,10 @@ nav {
 .timeline {
   position: relative;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: -20px;
@@ -1314,15 +1295,12 @@ nav {
 .tl-item {
   position: relative;
   width: 100%;
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 20px;
@@ -1353,9 +1331,8 @@ nav {
         top: 50%;
         margin-top: -9px; } }
   .tl-item:nth-child(even) {
-    -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
-            align-self: flex-end; }
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
     @media screen and (min-width: 64em) {
       .tl-item:nth-child(even) .tl-content:before {
         right: auto;
@@ -1492,126 +1469,104 @@ nav {
 */
 .hbox {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row; }
 
 .vbox {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column; }
 
 .ai-flex-end {
   -webkit-box-align: end;
-  -webkit-align-items: flex-end;
       -ms-flex-align: end;
               -ms-grid-row-align: flex-end;
           align-items: flex-end; }
 
 .ai-flex-start {
   -webkit-box-align: start;
-  -webkit-align-items: flex-start;
       -ms-flex-align: start;
               -ms-grid-row-align: flex-start;
           align-items: flex-start; }
 
 .ai-center {
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
               -ms-grid-row-align: center;
           align-items: center; }
 
 .ai-stretch {
   -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
       -ms-flex-align: stretch;
               -ms-grid-row-align: stretch;
           align-items: stretch; }
 
 .ac-flex-end {
-  -webkit-align-content: flex-end;
-      -ms-flex-line-pack: end;
-          align-content: flex-end; }
+  -ms-flex-line-pack: end;
+      align-content: flex-end; }
 
 .ac-flex-start {
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start; }
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
 
 .ac-center {
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center; }
+  -ms-flex-line-pack: center;
+      align-content: center; }
 
 .ac-stretch {
-  -webkit-align-content: stretch;
-      -ms-flex-line-pack: stretch;
-          align-content: stretch; }
+  -ms-flex-line-pack: stretch;
+      align-content: stretch; }
 
 .jc-flex-start {
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
 
 .jc-flex-end {
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
 .jc-center {
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
 
 .jc-space-between {
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
 .jc-space-around {
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around; }
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 .as-flex-end {
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end; }
+  -ms-flex-item-align: end;
+      align-self: flex-end; }
 
 .as-flex-start {
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start; }
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
 
 .as-center {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center; }
+  -ms-flex-item-align: center;
+      align-self: center; }
 
 .as-stretch {
-  -webkit-align-self: stretch;
-      -ms-flex-item-align: stretch;
-          align-self: stretch; }
+  -ms-flex-item-align: stretch;
+      align-self: stretch; }
 
 .flex-1 {
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1; }
 
@@ -1756,15 +1711,16 @@ nav {
   .highlight .il {
     color: #099; }
 
-.resume {
-  display: block; }
-  .resume .print-logo {
+body.resume {
+  display: block;
+  background-color: #fff; }
+  body.resume .print-logo {
     height: 24mm;
     width: 24mm;
     display: block; }
-  .resume header.header {
+  body.resume header.header {
     display: none; }
-  .resume .resume-header {
+  body.resume .resume-header {
     min-height: 0;
     padding: 0mm 4mm;
     margin-bottom: 5mm;
@@ -1775,27 +1731,26 @@ nav {
     background-color: #fff;
     font-family: Helvetica, sans-serif;
     line-height: 1.2; }
-  .resume .section {
+  body.resume .section {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-  .resume .section-experience {
+  body.resume .section-experience {
     padding-top: 2mm;
     padding-bottom: 0;
     margin-top: 0;
     margin-bottom: 0;
     border-top: 2px solid #ccc; }
-  .resume .column {
+  body.resume .column {
     margin: 0;
     width: 100%; }
-  .resume .column--sidebar {
+  body.resume .column--sidebar {
     width: 24%;
     padding-right: 0; }
-  .resume .column--main {
+  body.resume .column--main {
     width: 76%;
     padding-left: 3mm; }
-  .resume .label {
+  body.resume .label {
     position: relative;
     height: 5mm;
     padding: 1px 15px;
@@ -1808,83 +1763,84 @@ nav {
     vertical-align: middle;
     color: #fff;
     font-size: 0.8rem; }
-    .resume .label > .label-content {
+    body.resume .label > .label-content {
       position: relative;
       z-index: 10; }
-    .resume .label:before, .resume .label:after {
+    body.resume .label:before, body.resume .label:after {
       content: "";
       position: absolute;
       top: 0;
       border-width: 2.5mm 10px;
       border-style: solid; }
-    .resume .label:after {
+    body.resume .label:after {
       right: -20px;
       border-color: transparent transparent transparent #2a7ae2; }
-    .resume .label:before {
+    body.resume .label:before {
       left: -10px;
       border-color: #2a7ae2 transparent #2a7ae2 transparent; }
-    .resume .label.label-default {
+    body.resume .label.label-default {
       background-color: #828282; }
-      .resume .label.label-default:after {
+      body.resume .label.label-default:after {
         right: -20px;
         border-color: transparent transparent transparent #828282; }
-      .resume .label.label-default:before {
+      body.resume .label.label-default:before {
         left: -10px;
         border-color: #828282 transparent #828282 transparent; }
-  .resume h3 {
+  body.resume h3 {
     line-height: 2rem;
     font-size: 1.16667rem;
     padding-top: 0; }
-  .resume .outline {
+  body.resume .outline {
     border: 1px solid #ccc;
     border-radius: 2mm;
     display: block;
     margin-left: 4mm;
     margin-right: 4mm;
     width: 100%; }
-  .resume .description {
+  body.resume .description {
     font-size: 1.1rem;
     line-height: 1.5; }
-  .resume .typeset hr {
+  body.resume .typeset hr {
     margin: 2mm 0;
     padding: 0; }
-  .resume .site-footer {
+  body.resume .site-footer {
     display: none; }
-  .resume .resume-name {
+  body.resume .resume-name {
     font-size: 1.8rem;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
     margin-bottom: 0.3rem; }
-    .resume .resume-name a {
+    body.resume .resume-name a {
       font-size: 1.4rem;
       font-weight: normal; }
-  .resume .skills {
+  body.resume .skills {
     font-family: Helvetica, sans-serif;
     font-size: 0.9rem;
     line-height: 1.2; }
-  .resume .roles p {
+  body.resume .roles p {
     margin-left: 1mm;
     margin-bottom: 0;
     padding-top: 1mm;
     paddding-bottom: 1mm;
     line-height: 1.2;
     font-size: 0.9rem; }
-  .resume .caption {
+  body.resume .caption {
     padding-top: 0;
     margin-top: 0;
     font-size: 0.6rem;
     text-transform: uppercase; }
 
 @media print {
-  .resume {
-    display: block; }
-    .resume .print-logo {
+  body.resume {
+    display: block;
+    background-color: #fff; }
+    body.resume .print-logo {
       height: 24mm;
       width: 24mm;
       display: block; }
-    .resume header.header {
+    body.resume header.header {
       display: none; }
-    .resume .resume-header {
+    body.resume .resume-header {
       min-height: 0;
       padding: 0mm 4mm;
       margin-bottom: 5mm;
@@ -1895,27 +1851,26 @@ nav {
       background-color: #fff;
       font-family: Helvetica, sans-serif;
       line-height: 1.2; }
-    .resume .section {
+    body.resume .section {
       display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
-    .resume .section-experience {
+    body.resume .section-experience {
       padding-top: 2mm;
       padding-bottom: 0;
       margin-top: 0;
       margin-bottom: 0;
       border-top: 2px solid #ccc; }
-    .resume .column {
+    body.resume .column {
       margin: 0;
       width: 100%; }
-    .resume .column--sidebar {
+    body.resume .column--sidebar {
       width: 24%;
       padding-right: 0; }
-    .resume .column--main {
+    body.resume .column--main {
       width: 76%;
       padding-left: 3mm; }
-    .resume .label {
+    body.resume .label {
       position: relative;
       height: 5mm;
       padding: 1px 15px;
@@ -1928,68 +1883,68 @@ nav {
       vertical-align: middle;
       color: #fff;
       font-size: 0.8rem; }
-      .resume .label > .label-content {
+      body.resume .label > .label-content {
         position: relative;
         z-index: 10; }
-      .resume .label:before, .resume .label:after {
+      body.resume .label:before, body.resume .label:after {
         content: "";
         position: absolute;
         top: 0;
         border-width: 2.5mm 10px;
         border-style: solid; }
-      .resume .label:after {
+      body.resume .label:after {
         right: -20px;
         border-color: transparent transparent transparent #2a7ae2; }
-      .resume .label:before {
+      body.resume .label:before {
         left: -10px;
         border-color: #2a7ae2 transparent #2a7ae2 transparent; }
-      .resume .label.label-default {
+      body.resume .label.label-default {
         background-color: #828282; }
-        .resume .label.label-default:after {
+        body.resume .label.label-default:after {
           right: -20px;
           border-color: transparent transparent transparent #828282; }
-        .resume .label.label-default:before {
+        body.resume .label.label-default:before {
           left: -10px;
           border-color: #828282 transparent #828282 transparent; }
-    .resume h3 {
+    body.resume h3 {
       line-height: 2rem;
       font-size: 1.16667rem;
       padding-top: 0; }
-    .resume .outline {
+    body.resume .outline {
       border: 1px solid #ccc;
       border-radius: 2mm;
       display: block;
       margin-left: 4mm;
       margin-right: 4mm;
       width: 100%; }
-    .resume .description {
+    body.resume .description {
       font-size: 1.1rem;
       line-height: 1.5; }
-    .resume .typeset hr {
+    body.resume .typeset hr {
       margin: 2mm 0;
       padding: 0; }
-    .resume .site-footer {
+    body.resume .site-footer {
       display: none; }
-    .resume .resume-name {
+    body.resume .resume-name {
       font-size: 1.8rem;
       font-family: Helvetica, sans-serif;
       font-weight: bold;
       margin-bottom: 0.3rem; }
-      .resume .resume-name a {
+      body.resume .resume-name a {
         font-size: 1.4rem;
         font-weight: normal; }
-    .resume .skills {
+    body.resume .skills {
       font-family: Helvetica, sans-serif;
       font-size: 0.9rem;
       line-height: 1.2; }
-    .resume .roles p {
+    body.resume .roles p {
       margin-left: 1mm;
       margin-bottom: 0;
       padding-top: 1mm;
       paddding-bottom: 1mm;
       line-height: 1.2;
       font-size: 0.9rem; }
-    .resume .caption {
+    body.resume .caption {
       padding-top: 0;
       margin-top: 0;
       font-size: 0.6rem;
