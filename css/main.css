@@ -1844,13 +1844,16 @@ body.resume {
     margin-right: 4mm;
     width: 100%; }
   body.resume .description {
-    font-size: 1.1rem;
-    line-height: 1.5; }
+    font-size: 0.9rem;
+    line-height: 1.25;
+    color: #555; }
   body.resume .typeset hr {
     margin: 2mm 0;
     padding: 0; }
   body.resume .site-footer {
     display: none; }
+  body.resume.typeset .caption {
+    margin-bottom: 0.5rem !important; }
   body.resume .resume-name {
     font-size: 1.8rem;
     font-family: Helvetica, sans-serif;
@@ -1965,13 +1968,16 @@ body.resume {
       margin-right: 4mm;
       width: 100%; }
     body.resume .description {
-      font-size: 1.1rem;
-      line-height: 1.5; }
+      font-size: 0.9rem;
+      line-height: 1.25;
+      color: #555; }
     body.resume .typeset hr {
       margin: 2mm 0;
       padding: 0; }
     body.resume .site-footer {
       display: none; }
+    body.resume.typeset .caption {
+      margin-bottom: 0.5rem !important; }
     body.resume .resume-name {
       font-size: 1.8rem;
       font-family: Helvetica, sans-serif;
