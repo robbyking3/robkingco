@@ -16,10 +16,11 @@ twitter_username: wscreative
 codepen_username: robbyking3
 github_username:  robbyking3
 
-
+paginate: 5
 permalink:     /work/:title.html
 # Build settings
 markdown: kramdown
 
 gems:
   - octopress-autoprefixer
+  - jekyll-paginate

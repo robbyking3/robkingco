@@ -7,7 +7,7 @@ categories: ['web', 'ui', 'front-end', 'management']
 isCurrent: true
 dateStarted: 2013-05-01 00:00:00 -0700
 summary: "Web app UI design and implementation. Styleguide, prototypes, LESS"
-resume: "Manage a large CSS library with Less/PostCSS, maintain a pattern library of UI components built with Fabricator, do some design in Sketch or in browser, and work with other team members to improve features."
+resume: "Manage a large CSS library with Less/PostCSS, maintain a pattern library of UI components built with Fabricator, design in Sketch or in-browser, and collaborate across multiple teams to implement and improve features."
 roles: ['Web Designer', 'Creative Team Lead']
 ---
 

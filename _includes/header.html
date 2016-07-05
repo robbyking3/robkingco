@@ -1,13 +1,13 @@
 <header class="header hbox ai-center">
   <div class="wrapper hbox ai-center fill-width">
-    <a class="logo" href="{{ site.url }}/" title="Home page - robking.co"></a>
+    <a class="logo" href="/" title="Home page - robking.co"></a>
     <h1 class="rob-meta site-title">
     Rob King
     </h1>
     <nav class="hbox ai-stretch jc-flex-end">
       {% for my_page in site.pages %}
         {% if my_page.title %}
-        <a class="page-link" href="{{ my_page.url | prepend: site.url }}">{{ my_page.title }}</a>
+        <a class="page-link" href="{{ my_page.url }}">{{ my_page.title }}</a>
         {% endif %}
       {% endfor %}
     </nav>

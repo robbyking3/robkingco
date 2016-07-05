@@ -104,8 +104,9 @@
 			width: 100%;
 		}
 		.description {
-			font-size: 1.1rem;
-			line-height: 1.5;
+			font-size: 0.9rem;
+			line-height: 1.25;
+			color: #555;
 		}
 		.typeset hr {
 			margin: 2mm 0;
@@ -114,6 +115,10 @@
 
 		.site-footer {
 			display: none;
+		}
+
+		&.typeset .caption {
+		    margin-bottom: 0.5rem !important;
 		}
 
 		.resume-name {
